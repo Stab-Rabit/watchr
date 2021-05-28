@@ -3,38 +3,37 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
-const StreamSelect = (props) => {
-  return (
-    <div id="stream-checkbox-container">
-      <div className="stream-checkbox">
-        Amazon{' '}
-        <input
-          name="amazon"
-          type="checkbox"
-          onChange={props.onStreamChange}
-          value={props.streamPrefs[0]}
-        />
-      </div>
-      <div className="stream-checkbox">
-        Hulu{' '}
-        <input
-          name="hulu"
-          type="checkbox"
-          onChange={props.onStreamChange}
-          value={props.streamPrefs[1]}
-        />
-      </div>
-      <div className="stream-checkbox">
-        Netflix{' '}
-        <input
-          name="netflix"
-          type="checkbox"
-          onChange={props.onStreamChange}
-          value={props.streamPrefs[2]}
-        />
-      </div>
+//creates StreamSelect react component checkbox to select streams while signing up
+const StreamSelect = (props) => (
+  <div id="stream-checkbox-container">
+    <div className="stream-checkbox">
+      Amazon{' '}
+      <input
+        name="amazon"
+        type="checkbox"
+        onChange={props.onStreamChange}
+        value={props.streamPrefs[0]}
+      />
     </div>
-  );
-}
+    <div className="stream-checkbox">
+      Hulu{' '}
+      <input
+        name="hulu"
+        type="checkbox"
+        onChange={props.onStreamChange}
+        value={props.streamPrefs[1]}
+      />
+    </div>
+    <div className="stream-checkbox">
+      Netflix{' '}
+      <input
+        name="netflix"
+        type="checkbox"
+        onChange={props.onStreamChange}
+        value={props.streamPrefs[2]}
+      />
+    </div>
+  </div>
+);
 
 export default StreamSelect;
